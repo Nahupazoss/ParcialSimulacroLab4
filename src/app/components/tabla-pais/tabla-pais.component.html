@@ -1,0 +1,10 @@
+<div class="country-list-container">
+    <h2>Seleccione un País</h2>
+    <div class="country-list">
+      <div class="country-item" *ngFor="let pais of paises" (click)="seleccionarPais(pais)">
+        <img [src]="pais.banderaUrl" [alt]="pais.nombre">
+        <span>{{ pais.nombre }}</span>
+      </div>
+    </div>
+  </div>
+  

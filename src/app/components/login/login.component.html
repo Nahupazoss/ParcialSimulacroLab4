@@ -1,0 +1,12 @@
+<body>
+    <div class="container">
+        <h2 style="color: rgb(0, 153, 255);">Iniciar Sesión</h2>
+        <form [formGroup]="formLogin">
+            <input type="email" formControlName="email" placeholder="Correo" required>
+            <input type="password" formControlName="password" placeholder="Contraseña" required>
+            <button type="button" (click)="onSubmit()">Login</button>
+            <button type="button" (click)="onSubmitHarcode()">Login admin</button>
+            <button type="button" (click)="onSubmitHarcode2()">Login empleado</button>
+        </form>
+    </div>
+</body>

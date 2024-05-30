@@ -1,0 +1,12 @@
+<div class="welcome-container">
+    <h1>Bienvenido a mi Página</h1>
+    <div *ngIf="userData">
+      <div class="github-info">
+        <img [src]="userData.avatar_url" alt="Avatar de GitHub">
+        <h2>{{ userData.login }}</h2>
+        <p>{{ userData.bio || 'Sin biografía disponible' }}</p>
+        <a [href]="userData.html_url" target="_blank">Ver perfil en GitHub</a>
+      </div>
+    </div>
+  </div>
+  

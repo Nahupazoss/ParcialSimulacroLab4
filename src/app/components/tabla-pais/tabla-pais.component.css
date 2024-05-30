@@ -1,0 +1,39 @@
+.country-list-container {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 500px;
+    margin: 20px auto;
+    text-align: center;
+  }
+  
+  .country-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+  }
+  
+  .country-item {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s, border-color 0.3s;
+  }
+  
+  .country-item:hover {
+    background-color: #f4f4f4;
+    border-color: #0366d6;
+  }
+  
+  .country-item img {
+    width: 30px;
+    height: 20px;
+    margin-right: 10px;
+  }
+  

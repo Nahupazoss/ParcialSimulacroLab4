@@ -9,16 +9,9 @@ import { Observable, map } from 'rxjs';
 export class FireStoreService {
   constructor(private firestore: AngularFirestore) { } // Inicializa AngularFireStorage en el constructor
 
-  obtenerPeliculas(): Observable<any[]> {
-    return this.firestore.collection('peliculas', ref => ref.orderBy('fechaEstreno')).valueChanges()
-      .pipe(
-        map((peliculas: any[]) => {
-          return peliculas.map(pelicula => {
-            const fechaEstreno = (pelicula.fechaEstreno as Timestamp);
-            return { ...pelicula, fechaEstreno };
-          });
-        })
-      );
+  obtenerRepartidores(): Observable<any[]> 
+  {
+    return this.firestore.collection('repartidores', ref => ref.orderBy('edad')).valueChanges()
   }
 
   obtenerActores(): Observable<any[]> 

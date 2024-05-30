@@ -5,7 +5,7 @@ import { Router } from '@angular/router';
 import { CommonModule } from '@angular/common';
 
 @Component({
-  selector: 'app-login',
+  selector: 'app-login2',
   standalone: true,
   imports: [CommonModule,FormsModule,ReactiveFormsModule],
   templateUrl: './login.component.html',
@@ -28,8 +28,8 @@ export default class LoginComponent
     {
       try
       {
-        const user = await this.userService.login(this.formLogin.value);
-        this.router.navigate(['/home']);
+        const user =  this.userService.login(this.formLogin.value);
+        this.router.navigate(['/bienvenida']);
       } 
       catch (error) 
       {

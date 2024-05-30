@@ -1,6 +1,6 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import AltaRepartidorComponent from './alta-repartidor.component';
+import {AltaRepartidorComponent} from './alta-repartidor.component';
 
 describe('AltaRepartidorComponent', () => {
   let component: AltaRepartidorComponent;

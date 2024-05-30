@@ -1,0 +1,23 @@
+<!-- HTML -->
+<table class="repartidores-table">
+  <thead>
+    <tr>
+      <th>DNI</th>
+      <th>Nombre</th>
+      <th>Edad</th>
+      <th>Capacidad de Transporte</th>
+      <th>País de Origen</th>
+      <th>Unidad Propia</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let repartidor of repartidores">
+      <td>{{ repartidor.dni }}</td>
+      <td>{{ repartidor.nombre }}</td>
+      <td>{{ repartidor.edad }}</td>
+      <td>{{ repartidor.capacidad }}</td>
+      <td>{{ repartidor.pais }}</td>
+      <td>{{ repartidor.unidadPropia ? 'Sí' : 'No' }}</td>
+    </tr>
+  </tbody>
+</table>

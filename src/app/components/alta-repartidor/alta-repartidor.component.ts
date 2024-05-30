@@ -13,7 +13,7 @@ import { FireStoreService } from '../../services/fire-store.service';
   templateUrl: './alta-repartidor.component.html',
   styleUrl: './alta-repartidor.component.css'
 })
-export default class AltaRepartidorComponent 
+export  class AltaRepartidorComponent 
 {
   repartidorForm: FormGroup;
 
@@ -27,6 +27,9 @@ export default class AltaRepartidorComponent
       unidadPropia: [false]
     });
   }
+
+  
+
 
   onPaisSeleccionado(pais: any): void 
   {

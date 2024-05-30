@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 import { Auth, createUserWithEmailAndPassword, signInWithEmailAndPassword, signOut } from '@angular/fire/auth';
 import { AngularFireAuth } from '@angular/fire/compat/auth';
 import { AngularFirestore } from '@angular/fire/compat/firestore';
+import { Observable } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
@@ -29,5 +30,9 @@ export class UserServiceService
     return this.firestore.collection('repartidores').doc(id).set(repartidor);
   }
 
+  getUserEstado(): Observable<any> 
+  {
+    return this.authAngular.authState;
+  }
 
 }

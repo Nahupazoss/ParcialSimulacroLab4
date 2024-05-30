@@ -1,7 +1,14 @@
-<nav class="navbar">
+<nav>
     <ul>
-        <li><a href="bienvenida">Bienvenida</a></li>
-        <li><a href="login">Login</a></li>
-        <li><a href="altaRepartidor">AltaRepartidor</a></li>
+      <ng-container *ngIf="authService.getUserEstado() | async as user; else loggedOut">
+        <li><a href="/altaRepartidor">altaRepartidor</a></li>
+        <li><a href="/listadoRepartidor">listadoRepartidor</a></li>
+        <li><a href="/bienvenida">Bienvenida</a></li>
+        <li class="logout-link"><a href="" (click)="onClick()">Logout</a></li>
+      </ng-container>
+      <ng-template #loggedOut>
+        <li><a href="/login">Login</a></li>
+        <li><a href="/bienvenida">Bienvenida</a></li>
+      </ng-template>
     </ul>
 </nav>
